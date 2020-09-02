@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form onsubmit="return validate( )">
+<table>
+<tr>
+<td>First Name:</td>
+<td><input type="text" name="firstname"></td>
+</tr>
+<tr>
+<form action ="/action_page.php">
+<td><label for="phone">Phone Number:</label><br><br></td>
+<td><input type="text" id="phone" name="phonenumber" placeholder="0123-456-789"><br><br></td>
+<tr>
+<td>Gender:</td>
+<td>
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female
+<input type="radio" name="gender" value="Other">Other
+</td>
+<tr>
+<td>
+<input type="checkbox" id="html" value="html"> HTML
+<input type="checkbox" id="CSS" value="CSS">HTML
+<input type="checkbox" id="javascript" value="javascript"> Javascript
+</td>
+</tr>
+<tr>
+<td>College:</td>
+<td><input type="text" name="college"></td>
+</tr>
+<tr>
+<td><input type="checkbox" id="acknw" onclick="enable( )"></td>
+<td>I declare above details given by me are true.</td>
+</tr>
+<tr>
+<td><input type="submit" id="sub" value="Submit" disabled></td>
+<td><input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+<script>
+function validate( ){
+var phn=document.getElementById("phonenumber").value;
+if(phn.length !=10 || isNaN(phn)){
+alert("Enter proper phone number with 10 digits");
+return false;
+}
+if((document.getElementById("html").checked || document.getElementById("CSS").checked || document.getElementById("javascript").checked));
+alert("check atleast one checkbox");
+return false;
+}
+return true;
+}
+function enable( ){
+if(document.getElementById("acknw").checked){
+document.getElementById("sub").disabled=false;
+}
+else{
+document.getElementById("sub").disabled=true;
+}
+}
+</script>
+</body>
+</html>
