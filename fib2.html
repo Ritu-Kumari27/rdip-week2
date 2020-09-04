@@ -1,0 +1,38 @@
+<html>
+   <head>
+     <title></title>
+</head>
+<body>
+
+Enter no. <input type='text' id="if"><button onclick="check( )">check</button><br>
+Res:<p id="res"></p><br><br>
+<script>
+function check( ){
+let p=document.getElementById("if").value;
+if(p>=10 && p<=100){
+document.getElementById("res").innerHTML="valid number";
+}
+else{
+document.getElementById("res").innerHTML="Enter no between 10 and 100";
+}
+}
+</script>
+Enter fibonacci number : <input type="text" id="fibo"><button onclick="fibo( )">Fibonacci</button><br>
+<script>
+function fibo( ){
+let k=document.getElementById( "fibo" ).value;
+let n1=0, n2=1, n3, i, s="";
+s+=n1+" "+n2;
+for(i=2; i<k; ++i)
+{
+n3=n1+n2;
+s+=" "+n3;
+n1=n2;
+n2=n3;
+}
+document.getElementById("fibores").innerHTML=s;
+}
+</script>
+</body>
+</html>
+
