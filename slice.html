@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p> Click the button to display the extracted part of the string.</p>
+<button type="button" onclick="myFunction( )">Try it</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+function myFunction( ) {
+var str = "Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser ";
+var res = str.slice(28,32);
+var res1 = str.slice(41,48);
+var res2 = str.slice(61,71);
+document.getElementById("demo").innerHTML = res;
+document.getElementById("demo1").innerHTML = res1;
+document.getElementById("demo2").innerHTML = res2;
+}
+</script>
+</body>
+</html>
